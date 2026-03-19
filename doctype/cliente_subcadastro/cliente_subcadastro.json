@@ -1,0 +1,53 @@
+{
+  "doctype": "DocType",
+  "name": "Cliente Subcadastro",
+  "module": "Eleva Core",
+  "istable": 1,
+  "fields": [
+    {
+      "fieldname": "sub_id",
+      "fieldtype": "Data",
+      "label": "SUB_ID",
+      "description": "Seis últimos dígitos do CNPJ",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "cnpj_completo",
+      "fieldtype": "Data",
+      "label": "CNPJ Completo",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "inscricao_estadual",
+      "fieldtype": "Data",
+      "label": "Inscrição Estadual"
+    },
+    {
+      "fieldname": "uf",
+      "fieldtype": "Data",
+      "label": "UF",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "nome_unidade",
+      "fieldtype": "Data",
+      "label": "Nome da Unidade",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "is_default",
+      "fieldtype": "Check",
+      "label": "Padrão",
+      "in_list_view": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "doctype": "DocType",
+  "name": "Cliente Endereco",
+  "module": "Eleva Core",
+  "istable": 1,
+  "fields": [
+    {
+      "fieldname": "address_type",
+      "fieldtype": "Select",
+      "label": "Tipo de Endereço",
+      "options": "Entrega\nFaturamento\nInstalação\nCorrespondência",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "cep",
+      "fieldtype": "Data",
+      "label": "CEP"
+    },
+    {
+      "fieldname": "logradouro",
+      "fieldtype": "Data",
+      "label": "Logradouro",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "numero",
+      "fieldtype": "Data",
+      "label": "Número"
+    },
+    {
+      "fieldname": "complemento",
+      "fieldtype": "Data",
+      "label": "Complemento"
+    },
+    {
+      "fieldname": "bairro",
+      "fieldtype": "Data",
+      "label": "Bairro"
+    },
+    {
+      "fieldname": "cidade",
+      "fieldtype": "Data",
+      "label": "Cidade",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "uf",
+      "fieldtype": "Data",
+      "label": "UF",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "is_default",
+      "fieldtype": "Check",
+      "label": "Padrão",
+      "in_list_view": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "doctype": "DocType",
+  "name": "Cliente Contato",
+  "module": "Eleva Core",
+  "istable": 1,
+  "fields": [
+    {
+      "fieldname": "contact_type",
+      "fieldtype": "Select",
+      "label": "Tipo",
+      "options": "Telefone\nCelular\nEmail\nWhatsApp\nContato Financeiro\nContato Comercial",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "contact_value",
+      "fieldtype": "Data",
+      "label": "Valor",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "contact_name",
+      "fieldtype": "Data",
+      "label": "Nome do Contato"
+    },
+    {
+      "fieldname": "is_primary",
+      "fieldtype": "Check",
+      "label": "Principal",
+      "in_list_view": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ]
+}

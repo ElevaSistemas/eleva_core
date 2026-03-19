@@ -1,0 +1,125 @@
+{
+  "doctype": "DocType",
+  "name": "Lead Eleva",
+  "module": "Eleva Core",
+  "custom": 0,
+  "istable": 0,
+  "track_changes": 1,
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "autoname": "format:{lead_code}",
+  "title_field": "display_label",
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "fields": [
+    {
+      "fieldname": "section_identity",
+      "fieldtype": "Section Break",
+      "label": "Identificação"
+    },
+    {
+      "fieldname": "sys_id",
+      "fieldtype": "Data",
+      "label": "SYS_ID",
+      "read_only": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "lead_code",
+      "fieldtype": "Data",
+      "label": "LEAD_CODE",
+      "read_only": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "display_label",
+      "fieldtype": "Data",
+      "label": "Rótulo Comercial",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "nome_comercial",
+      "fieldtype": "Data",
+      "label": "Nome Comercial"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Novo\nEm Atendimento\nQualificado\nConvertido\nPerdido",
+      "default": "Novo",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "column_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "lead_source",
+      "fieldtype": "Select",
+      "label": "Origem",
+      "options": "WhatsApp\nEmail\nSite\nIndicação\nManual\nOutro",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "owner_name",
+      "fieldtype": "Data",
+      "label": "Responsável"
+    },
+    {
+      "fieldname": "folder_path",
+      "fieldtype": "Data",
+      "label": "Caminho da Pasta",
+      "read_only": 1
+    },
+    {
+      "fieldname": "cliente_vinculado",
+      "fieldtype": "Link",
+      "label": "Cliente Vinculado",
+      "options": "Cliente Eleva",
+      "read_only": 1
+    },
+    {
+      "fieldname": "section_notes",
+      "fieldtype": "Section Break",
+      "label": "Observações"
+    },
+    {
+      "fieldname": "observacoes",
+      "fieldtype": "Small Text",
+      "label": "Observações"
+    },
+    {
+      "fieldname": "section_contacts",
+      "fieldtype": "Section Break",
+      "label": "Meios de Contato"
+    },
+    {
+      "fieldname": "contact_methods",
+      "fieldtype": "Table",
+      "label": "Meios de Contato",
+      "options": "Lead Contact Method"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "print": 1,
+      "email": 1,
+      "export": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "print": 1,
+      "email": 1,
+      "export": 1
+    }
+  ]
+}

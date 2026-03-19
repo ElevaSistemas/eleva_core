@@ -1,0 +1,179 @@
+{
+  "doctype": "DocType",
+  "name": "Cliente Eleva",
+  "module": "Eleva Core",
+  "custom": 0,
+  "istable": 0,
+  "track_changes": 1,
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "autoname": "format:{client_code}",
+  "title_field": "display_label",
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "fields": [
+    {
+      "fieldname": "section_identity",
+      "fieldtype": "Section Break",
+      "label": "Identificação"
+    },
+    {
+      "fieldname": "sys_id",
+      "fieldtype": "Data",
+      "label": "SYS_ID",
+      "read_only": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "client_code",
+      "fieldtype": "Data",
+      "label": "CLIENT_CODE",
+      "read_only": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "display_label",
+      "fieldtype": "Data",
+      "label": "Rótulo Comercial",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "tipo_cadastro",
+      "fieldtype": "Select",
+      "label": "Tipo de Cadastro",
+      "options": "PF\nPJ",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "column_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "lead_origin",
+      "fieldtype": "Link",
+      "label": "Lead de Origem",
+      "options": "Lead Eleva",
+      "read_only": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Ativo\nInativo\nBloqueado",
+      "default": "Ativo",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "folder_path",
+      "fieldtype": "Data",
+      "label": "Caminho da Pasta",
+      "read_only": 1
+    },
+    {
+      "fieldname": "section_name",
+      "fieldtype": "Section Break",
+      "label": "Dados Principais"
+    },
+    {
+      "fieldname": "nome_principal",
+      "fieldtype": "Data",
+      "label": "Nome Principal",
+      "reqd": 1
+    },
+    {
+      "fieldname": "razao_social",
+      "fieldtype": "Data",
+      "label": "Razão Social"
+    },
+    {
+      "fieldname": "nome_fantasia",
+      "fieldtype": "Data",
+      "label": "Nome Fantasia"
+    },
+    {
+      "fieldname": "nome_pf",
+      "fieldtype": "Data",
+      "label": "Nome da Pessoa Física"
+    },
+    {
+      "fieldname": "column_break_2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "cnpj_raiz",
+      "fieldtype": "Data",
+      "label": "CNPJ Raiz (8 dígitos)"
+    },
+    {
+      "fieldname": "cpf",
+      "fieldtype": "Data",
+      "label": "CPF"
+    },
+    {
+      "fieldname": "tipo_operacao",
+      "fieldtype": "Select",
+      "label": "Tipo de Operação",
+      "options": "Eleva\nPortaPaletesFácil\nEstanteFácil"
+    },
+    {
+      "fieldname": "observacoes",
+      "fieldtype": "Small Text",
+      "label": "Observações"
+    },
+    {
+      "fieldname": "section_contacts",
+      "fieldtype": "Section Break",
+      "label": "Contatos"
+    },
+    {
+      "fieldname": "contatos",
+      "fieldtype": "Table",
+      "label": "Contatos",
+      "options": "Cliente Contato"
+    },
+    {
+      "fieldname": "section_addresses",
+      "fieldtype": "Section Break",
+      "label": "Endereços"
+    },
+    {
+      "fieldname": "enderecos",
+      "fieldtype": "Table",
+      "label": "Endereços",
+      "options": "Cliente Endereco"
+    },
+    {
+      "fieldname": "section_subcadastros",
+      "fieldtype": "Section Break",
+      "label": "Subcadastros PJ"
+    },
+    {
+      "fieldname": "subcadastros",
+      "fieldtype": "Table",
+      "label": "Subcadastros PJ",
+      "options": "Cliente Subcadastro"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "print": 1,
+      "email": 1,
+      "export": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "print": 1,
+      "email": 1,
+      "export": 1
+    }
+  ]
+}
