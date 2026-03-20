@@ -27,14 +27,27 @@
       "in_list_view": 1
     },
     {
+      "fieldname": "is_verified",
+      "fieldtype": "Check",
+      "label": "Verificado",
+      "in_list_view": 1
+    },
+    {
       "fieldname": "notes",
-      "fieldtype": "Data",
+      "fieldtype": "Small Text",
       "label": "Observação"
     }
   ],
   "permissions": [
     {
       "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales User",
       "read": 1,
       "write": 1,
       "create": 1,

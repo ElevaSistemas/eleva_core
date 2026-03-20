@@ -3,18 +3,21 @@
   "name": "Cliente Subcadastro",
   "module": "Eleva Core",
   "istable": 1,
+  "editable_grid": 1,
   "fields": [
     {
       "fieldname": "sub_id",
       "fieldtype": "Data",
       "label": "SUB_ID",
       "description": "Seis últimos dígitos do CNPJ",
+      "reqd": 1,
       "in_list_view": 1
     },
     {
       "fieldname": "cnpj_completo",
       "fieldtype": "Data",
       "label": "CNPJ Completo",
+      "reqd": 1,
       "in_list_view": 1
     },
     {
@@ -24,8 +27,9 @@
     },
     {
       "fieldname": "uf",
-      "fieldtype": "Data",
+      "fieldtype": "Select",
       "label": "UF",
+      "options": "AC\nAL\nAP\nAM\nBA\nCE\nDF\nES\nGO\nMA\nMT\nMS\nMG\nPA\nPB\nPR\nPE\nPI\nRJ\nRN\nRS\nRO\nRR\nSC\nSP\nSE\nTO",
       "in_list_view": 1
     },
     {
@@ -35,15 +39,42 @@
       "in_list_view": 1
     },
     {
+      "fieldname": "contato_faturamento",
+      "fieldtype": "Data",
+      "label": "Contato de Faturamento"
+    },
+    {
+      "fieldname": "email_faturamento",
+      "fieldtype": "Data",
+      "label": "E-mail de Faturamento"
+    },
+    {
+      "fieldname": "telefone_unidade",
+      "fieldtype": "Data",
+      "label": "Telefone da Unidade"
+    },
+    {
       "fieldname": "is_default",
       "fieldtype": "Check",
       "label": "Padrão",
       "in_list_view": 1
+    },
+    {
+      "fieldname": "observacoes",
+      "fieldtype": "Small Text",
+      "label": "Observações"
     }
   ],
   "permissions": [
     {
       "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales User",
       "read": 1,
       "write": 1,
       "create": 1,

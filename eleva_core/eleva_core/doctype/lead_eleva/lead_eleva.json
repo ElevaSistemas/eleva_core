@@ -80,6 +80,42 @@
       "read_only": 1
     },
     {
+      "fieldname": "section_pipeline",
+      "fieldtype": "Section Break",
+      "label": "Pipeline Comercial"
+    },
+    {
+      "fieldname": "etapa_funil",
+      "fieldtype": "Select",
+      "label": "Etapa do Funil",
+      "options": "Triagem\nQualificação\nProposta\nNegociação\nConvertido\nPerdido",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "column_break_pipeline",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "tipo_demanda",
+      "fieldtype": "Select",
+      "label": "Tipo de Demanda",
+      "options": "Compra\nLocação\nServiços\nOutro"
+    },
+    {
+      "fieldname": "categoria_demanda",
+      "fieldtype": "Select",
+      "label": "Categoria",
+      "options": "Porta Paletes\nEstante",
+      "depends_on": "eval:doc.tipo_demanda=='Compra' || doc.tipo_demanda=='Locação'"
+    },
+    {
+      "fieldname": "subtipo_demanda",
+      "fieldtype": "Select",
+      "label": "Subtipo",
+      "options": "Novo\nSeminovo\nPadrão\nBuilt-to-Suit",
+      "depends_on": "eval:doc.tipo_demanda=='Compra' || doc.tipo_demanda=='Locação'"
+    },
+    {
       "fieldname": "section_notes",
       "fieldtype": "Section Break",
       "label": "Observações"

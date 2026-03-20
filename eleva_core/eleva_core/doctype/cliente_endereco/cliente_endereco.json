@@ -3,6 +3,7 @@
   "name": "Cliente Endereco",
   "module": "Eleva Core",
   "istable": 1,
+  "editable_grid": 1,
   "fields": [
     {
       "fieldname": "address_type",
@@ -15,7 +16,8 @@
     {
       "fieldname": "cep",
       "fieldtype": "Data",
-      "label": "CEP"
+      "label": "CEP",
+      "in_list_view": 1
     },
     {
       "fieldname": "logradouro",
@@ -46,20 +48,51 @@
     },
     {
       "fieldname": "uf",
-      "fieldtype": "Data",
+      "fieldtype": "Select",
       "label": "UF",
+      "options": "AC\nAL\nAP\nAM\nBA\nCE\nDF\nES\nGO\nMA\nMT\nMS\nMG\nPA\nPB\nPR\nPE\nPI\nRJ\nRN\nRS\nRO\nRR\nSC\nSP\nSE\nTO",
       "in_list_view": 1
+    },
+    {
+      "fieldname": "pais",
+      "fieldtype": "Data",
+      "label": "País",
+      "default": "Brasil"
+    },
+    {
+      "fieldname": "codigo_ibge",
+      "fieldtype": "Data",
+      "label": "Código IBGE",
+      "read_only": 1
     },
     {
       "fieldname": "is_default",
       "fieldtype": "Check",
-      "label": "Padrão",
+      "label": "Endereço Padrão",
       "in_list_view": 1
+    },
+    {
+      "fieldname": "is_verified",
+      "fieldtype": "Check",
+      "label": "Verificado",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Observações"
     }
   ],
   "permissions": [
     {
       "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales User",
       "read": 1,
       "write": 1,
       "create": 1,
