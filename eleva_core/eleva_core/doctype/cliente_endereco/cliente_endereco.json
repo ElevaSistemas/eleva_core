@@ -9,7 +9,10 @@
       "fieldname": "address_type",
       "fieldtype": "Select",
       "label": "Tipo de Endereço",
-      "options": "Entrega\nFaturamento\nInstalação\nCorrespondência",
+      "options": "Entrega
+Faturamento
+Instalação
+Correspondência",
       "reqd": 1,
       "in_list_view": 1
     },
@@ -50,7 +53,33 @@
       "fieldname": "uf",
       "fieldtype": "Select",
       "label": "UF",
-      "options": "AC\nAL\nAP\nAM\nBA\nCE\nDF\nES\nGO\nMA\nMT\nMS\nMG\nPA\nPB\nPR\nPE\nPI\nRJ\nRN\nRS\nRO\nRR\nSC\nSP\nSE\nTO",
+      "options": "AC
+AL
+AP
+AM
+BA
+CE
+DF
+ES
+GO
+MA
+MT
+MS
+MG
+PA
+PB
+PR
+PE
+PI
+RJ
+RN
+RS
+RO
+RR
+SC
+SP
+SE
+TO",
       "in_list_view": 1
     },
     {

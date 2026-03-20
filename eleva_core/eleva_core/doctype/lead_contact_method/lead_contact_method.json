@@ -9,7 +9,10 @@
       "fieldname": "contact_type",
       "fieldtype": "Select",
       "label": "Tipo",
-      "options": "Telefone\nCelular\nEmail\nWhatsApp",
+      "options": "Telefone
+Celular
+Email
+WhatsApp",
       "reqd": 1,
       "in_list_view": 1
     },

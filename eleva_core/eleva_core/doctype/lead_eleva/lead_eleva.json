@@ -46,7 +46,11 @@
       "fieldname": "status",
       "fieldtype": "Select",
       "label": "Status",
-      "options": "Novo\nEm Atendimento\nQualificado\nConvertido\nPerdido",
+      "options": "Novo
+Em Atendimento
+Qualificado
+Convertido
+Perdido",
       "default": "Novo",
       "in_list_view": 1
     },
@@ -58,7 +62,12 @@
       "fieldname": "lead_source",
       "fieldtype": "Select",
       "label": "Origem",
-      "options": "WhatsApp\nEmail\nSite\nIndicação\nManual\nOutro",
+      "options": "WhatsApp
+Email
+Site
+Indicação
+Manual
+Outro",
       "in_list_view": 1
     },
     {
@@ -88,7 +97,12 @@
       "fieldname": "etapa_funil",
       "fieldtype": "Select",
       "label": "Etapa do Funil",
-      "options": "Triagem\nQualificação\nProposta\nNegociação\nConvertido\nPerdido",
+      "options": "Triagem
+Qualificação
+Proposta
+Negociação
+Convertido
+Perdido",
       "in_list_view": 1
     },
     {
@@ -99,20 +113,27 @@
       "fieldname": "tipo_demanda",
       "fieldtype": "Select",
       "label": "Tipo de Demanda",
-      "options": "Compra\nLocação\nServiços\nOutro"
+      "options": "Compra
+Locação
+Serviços
+Outro"
     },
     {
       "fieldname": "categoria_demanda",
       "fieldtype": "Select",
       "label": "Categoria",
-      "options": "Porta Paletes\nEstante",
+      "options": "Porta Paletes
+Estante",
       "depends_on": "eval:doc.tipo_demanda=='Compra' || doc.tipo_demanda=='Locação'"
     },
     {
       "fieldname": "subtipo_demanda",
       "fieldtype": "Select",
       "label": "Subtipo",
-      "options": "Novo\nSeminovo\nPadrão\nBuilt-to-Suit",
+      "options": "Novo
+Seminovo
+Padrão
+Built-to-Suit",
       "depends_on": "eval:doc.tipo_demanda=='Compra' || doc.tipo_demanda=='Locação'"
     },
     {

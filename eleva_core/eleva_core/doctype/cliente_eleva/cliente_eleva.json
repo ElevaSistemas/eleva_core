@@ -41,7 +41,8 @@
       "fieldname": "tipo_cadastro",
       "fieldtype": "Select",
       "label": "Tipo de Cadastro",
-      "options": "PF\nPJ",
+      "options": "PF
+PJ",
       "reqd": 1,
       "in_list_view": 1
     },
@@ -57,10 +58,18 @@
       "read_only": 1
     },
     {
+      "fieldname": "convertido_de_lead",
+      "fieldtype": "Check",
+      "label": "Convertido de Lead",
+      "read_only": 1
+    },
+    {
       "fieldname": "status",
       "fieldtype": "Select",
       "label": "Status",
-      "options": "Ativo\nInativo\nBloqueado",
+      "options": "Ativo
+Inativo
+Bloqueado",
       "default": "Ativo",
       "in_list_view": 1
     },
@@ -111,10 +120,19 @@
       "label": "CPF"
     },
     {
-      "fieldname": "tipo_operacao",
+      "fieldname": "documento_principal",
+      "fieldtype": "Data",
+      "label": "Documento Principal",
+      "read_only": 1
+    },
+    {
+      "fieldname": "empresa_atendimento",
       "fieldtype": "Select",
-      "label": "Tipo de Operação",
-      "options": "Eleva\nPortaPaletesFácil\nEstanteFácil"
+      "label": "Empresa de Atendimento",
+      "options": "Eleva
+PortaPaletesFácil
+EstanteFácil",
+      "in_list_view": 1
     },
     {
       "fieldname": "observacoes",
